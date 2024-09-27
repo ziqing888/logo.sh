@@ -11,4 +11,4 @@ echo -e "\e[1;31m  ╚═════╝  ╚═════╝ ╚═╝  ╚�
 
 echo -e "\n\e[1;32m推特 : https://x.com/qklxsqf\e[0m"
 
-echo -e "\n\e[1;33m欢迎来到 Eclipse 安装程序！\e[0m"
+echo -e "\n\e[1;33m欢迎来到 子清的指南 安装程序！\e[0m"

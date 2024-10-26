@@ -1,20 +1,23 @@
-echo -e "\e[1;34m
-    ______   _      _                           
-   |___  /  (_)    (_)                          
-      / /    _  ___ _  ___  _ __                
-     / /    | |/ __| |/ _ \| '_ \               
-    / /__   | | (__| | (_) | | | |              
-   /_____|  |_|\___|_|\___/|_| |_|              
-                                             
-\e[0m"
+#!/bin/bash
 
+# 检查并安装 toilet 和 lolcat
+if ! command -v toilet &> /dev/null; then
+    sudo apt update -y
+    sudo apt install toilet -y
+fi
+if ! command -v lolcat &> /dev/null; then
+    sudo apt update -y
+    sudo apt install lolcat -y
+fi
 
-echo -e "\e[1;31m
-◤━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◥
-    我的电报群 : https://t.me/+1z9LHpAC2mA4YmNl
-       我的推特: https://x.com/qklxsqf
-◣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◢
-      
-\e[0m"
+# 使用 toilet 打印大字效果作为 logo
+logo_text=$(toilet -f mono12 -F border "@qklxsq")
 
-echo -e "\n\e[1;33m欢迎来到子清的安装程序！\e[0m"
+# 打印大字 logo 文本
+echo "$logo_text" | lolcat
+
+# 打印装饰线和链接信息
+echo " 🌐 ————————————————————————————————————————————————— 🌐" | lolcat
+echo "   🛰️  X : https://x.com/qklxsqf  ▪️  TG : https://t.me/qklxsqf 🛰️" | lolcat
+echo " 🌐 ————————————————————————————————————————————————— 🌐" | lolcat
+
